@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <!-- Registration Form -->
+  <form id="regForm" novalidate enctype="multipart/form-data">
+    
+    <!-- Full Name -->
+    <label for="fullname">Full Name <span class="required">*</span></label>
+    <input type="text" id="fullname" name="fullname" class="input-field" 
+           placeholder="Enter full name" required>
+    <br>
+
+    <!-- Email ID -->
+    <label for="email">Email ID <span class="required">*</span></label>
+    <input type="email" id="email" name="email" class="input-field" 
+           placeholder="name@example.com" required>
+    <br>
+
+    <!-- Course -->
+    <label for="course">Course <span class="required">*</span></label>
+    <select id="course" name="course" class="input-field" required>
+      <option value="">-- Select Course --</option>
+      <option value="bca">BCA</option>
+      <option value="btech">B.Tech</option>
+      <option value="mca">MCA</option>
+      <option value="mba">MBA</option>
+    </select>
+    <br>
+
+    <!-- Gender -->
+    <fieldset class="radio-group">
+      <legend>Gender <span class="required">*</span></legend>
+      <label><input type="radio" name="gender" value="male" required> Male</label><br>
+      <label><input type="radio" name="gender" value="female"> Female</label><br>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </fieldset>
+    <br>
+
+    <!-- Hobbies -->
+    <fieldset class="checkbox-group">
+      <legend>Hobbies</legend>
+      <label><input type="checkbox" name="hobbies" value="dancing"> Dancing</label><br>
+      <label><input type="checkbox" name="hobbies" value="music"> Music</label><br>
+      <label><input type="checkbox" name="hobbies" value="sports"> Sports</label><br>
+      <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+    </fieldset>
+    <br>
+
+    <!-- Profile Photo Upload -->
+    <label for="profilePhoto">Profile Photo</label>
+    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" class="input-field">
+    <br>
+
+    <!-- Buttons -->
+    <div class="button-row">
+      <button type="submit" id="submitBtn" class="btn">Submit</button>
+      <button type="reset" class="btn secondary">Reset</button>
+    </div>
+
+    <!-- Message area -->
+    <div id="message" role="status" aria-live="polite"></div>
+  </form>
+
+  <footer>
+    <small>Made with • HTML5 • CSS3 • JavaScript</small>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
