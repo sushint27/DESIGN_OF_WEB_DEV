@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Picture background */
+body{
+border-radius: 10px;
+
+
+
+
+form {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px 20px;
+align-items: start;
+}
+
+
+label { display: block; font-weight: 600; }
+
+
+.input-field {
+padding: 10px 12px;
+border: 1px solid #cfd8e3;
+border-radius: 6px;
+outline: none;
+width: 100%;
+box-sizing: border-box;
+}
+
+
+.input-field:focus {
+border-color: #0b69d6;
+box-shadow: 0 0 0 4px rgba(11,105,214,0.08);
+}
+
+
+fieldset { border: none; margin: 0; padding: 0; }
+
+
+.radio-group, .checkbox-group {
+grid-column: 1 / -1; /* full width */
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+
+.button-row { grid-column: 1 / -1; display:flex; gap:8px; }
+
+
+.btn {
+padding: 10px 16px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+font-weight: 600;
+}
+
+
+.btn.secondary { background: transparent; border: 1px solid #cfd8e3; }
+
+
+.btn#submitBtn { background: #0b69d6; color: #fff; }
+
+
+#message { grid-column: 1 / -1; margin-top: 6px; font-weight: 600; }
+
+
+.required { color: #d23; }
+
+
+footer { text-align:center; grid-column:1/-1; margin-top:1rem; color:#667; }
+
+
+/* Responsive: tablet */
+@media (max-width: 800px) {
+form { grid-template-columns: 1fr; }
+}
+
+
+/* Small mobile tweaks */
+@media (max-width: 420px) {
+.container { padding: 0.8rem; border-radius: 6px; }
+.btn { padding: 9px 12px; }
+}
+}
